@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NetworkTriggerApp</string>
+    <string name="about_app">About app</string>
+    <string name="app_settings">Settings</string>
+
+</resources>

@@ -1,0 +1,147 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WARNING!"
+            android:id="@+id/txtViewWarning"
+            android:textColor="#ffd71417"
+            android:layout_below="@+id/imageButton"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dev wlan0 subnetwork should be original for each AP-device! Change it carefully!"
+            android:id="@+id/txtViewWlanWarning"
+            android:layout_below="@+id/txtViewWarning"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dev tun0 subnetwork should be the same for each AP-device! Do not change it unless absolutely necessary!"
+            android:id="@+id/txtViewTunWarning"
+            android:layout_below="@+id/txtViewWlanWarning"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/txtViewWlanWarning" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current dev wlan0 subnetwork:"
+            android:id="@+id/txtViewInfoWlan0"
+            android:layout_below="@+id/txtViewTunWarning"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextSetWlanSubnetwork"
+            android:layout_below="@+id/txtViewInfoWlan0"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="set new wlan0 subnetwork"
+            android:id="@+id/btnSetWlanSubnetwork"
+            android:layout_below="@+id/editTextSetWlanSubnetwork"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/button_success_selector" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current dev tun0 subnetwork:"
+            android:id="@+id/txtViewInfoTun0"
+            android:layout_below="@+id/btnSetWlanSubnetwork"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/editTextSetTunSubnetwork" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextSetTunSubnetwork"
+            android:layout_below="@+id/txtViewInfoTun0"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="set new tun0 subnetwork"
+            android:id="@+id/btnSetTunSubnetwork"
+            android:layout_below="@+id/editTextSetTunSubnetwork"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/editTextSetTunSubnetwork"
+            android:background="@drawable/button_success_selector" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtViewROOTinfo"
+            android:text="ROOT-access request to SuperSU:"
+            android:layout_below="@+id/btnSetTunSubnetwork"
+            android:layout_alignEnd="@+id/btnSetTunSubnetwork"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="access root"
+            android:id="@+id/btnObtainRoot"
+            android:background="@drawable/button_red_selector"
+            android:layout_below="@+id/txtViewROOTinfo"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/txtViewROOTinfo" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="enable wirelless AP mode and mobile data on boot"
+            android:id="@+id/checkBoxEnableWifiApMobileDataOnBoot"
+            android:checked="false"
+            android:layout_below="@+id/btnObtainRoot"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
